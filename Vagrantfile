@@ -42,6 +42,7 @@ Vagrant.configure('2') do |config|
     chef.nodes_path = 'provision/nodes'
 
     chef.add_recipe 'dev'
+    chef.add_recipe 'gui'
     chef.add_recipe 'nginx'
   end
   
