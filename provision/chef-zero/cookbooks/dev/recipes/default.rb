@@ -16,7 +16,9 @@ execute 'install-development-tools' do
   command 'yum groupinstall -y "Development Tools"'
 end
 
+# install pre-requsite packages for future installs
 packages_to_install = %w(
+    alien
     asciidoc 
     autoconf
     curl-devel
@@ -26,10 +28,13 @@ packages_to_install = %w(
     perl-devel
     xmlto
     zlib-devel
+    curl
+    file
+    git
+    irb
+    python-setuptools
+    ruby
 )
-
-#    dh-autoreconf
-#    docbook2X
 
 packages_to_install.each do |pkg|
   package pkg do
