@@ -4,6 +4,9 @@
 ### Vagrant ###
 .vagrant/
 
+### Chef ###
+provision/nodes/
+
 ### IntelliJ ###
 .idea/
 
